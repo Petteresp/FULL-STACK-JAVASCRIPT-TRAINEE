@@ -1,0 +1,41 @@
+
+body{
+    background-color: lightblue;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+div{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    width: 25%;
+    margin: auto;
+    background-color: rgb(244, 244, 244);
+}
+label{
+    margin: 5px;
+    width: 100%;
+}
+
+button{
+ width: 30%;   
+}
+
+h1{
+  color: red;
+  text-align: center;
+}
+
+img{
+   
+   display: block;
+   margin: auto;
+   width: 400px;
+   height: 300px;
+   margin-top: 20px;
+}

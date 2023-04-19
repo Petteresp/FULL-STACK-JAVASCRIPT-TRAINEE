@@ -1,0 +1,20 @@
+{
+    "mascotas":[
+        {
+            "id": "1",
+            "nombre": "churu",
+            "propietario": {
+                "run": "1.11.1.1",
+                "nombre": "peter"
+            }
+        },
+        {
+            "id": "2",
+            "nombre": "aron",
+            "propietario": {
+                "run": "1.11.1.1",
+                "nombre": "peter"
+            }
+        }
+    ]
+}

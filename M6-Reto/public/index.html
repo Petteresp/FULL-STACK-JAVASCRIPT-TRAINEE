@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+  <h1 class="titulo">Menú principal</h1>
+  <a href="cartones.html"><input type="button" value="Ver cartones"></a>
+  <a href="nuevo-carton.html"><input type="button" value="Crear cartón"></a>
+
+<style>
+  body{
+    text-align: center;
+  }
+  .titulo{
+  color: brown;
+  }
+</style>
+<script>
+
+  //un auxiliar para no volver a generar los 5 cartones cuando se recargue la pagina
+      fetch('http://localhost:3000/index')
+        .then(response => response.json())
+        .then(auxiliar => {
+          console.log(auxiliar.aux);
+
+        if(auxiliar.aux == 0){
+
+          for (let i = 0; i < 5; i++) {
+
+           fetch('http://localhost:3000/cartones', { method: 'POST' })
+           .then(response => response.json())
+
+          }; 
+        }
+            });      
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+
+.contenedor{
+display: grid;
+height: 50vh;
+justify-content: center;
+gap: 1px;
+
+}
+
+canvas{
+border: dashed 5px red;
+width: 450px;
+height: 300px;
+}
+
+button{
+    width: 100%;
+}

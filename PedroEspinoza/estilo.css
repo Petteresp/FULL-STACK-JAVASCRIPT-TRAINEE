@@ -1,0 +1,31 @@
+
+
+body{
+    background-color: white;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    border-color: black;
+    border-radius: 5px;;
+    background-color: rgb(239, 239, 239);
+    box-shadow: 2px 2px 10px gray;
+}
+li{
+    font: 16pt sans-serif;
+   display: flex;
+   align-items: center;
+   margin: 15px;
+   padding: 10px;
+   background-color: rgb(240, 240, 240);
+   border-radius: 5px;
+   box-shadow: 2px 2px 10px gray;
+}
+
+img{
+   width: 200px;
+   height: 200px;
+   margin: 10px; 
+}
+
+

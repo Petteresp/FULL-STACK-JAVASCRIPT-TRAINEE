@@ -1,0 +1,15 @@
+#clicker{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    border: solid 2px rgb(0, 88, 88) ;
+    background-color: rgb(64, 187, 187);
+    color: white;
+    font-size: 30px;
+}
+
+.contenedor{
+
+display: grid;
+justify-content: center;
+}

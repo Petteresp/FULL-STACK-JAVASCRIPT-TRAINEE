@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1 class="titulo" >Listado de cartones</h1>
+  <a href="index.html"><input type="button" value="Inicio"></a>
+  <a href="nuevo-carton.html"><input type="button" value="Crear cartón"></a>
+  
+ 
+  <div id="cartones">
+      
+    <!-- cartones listados por el script-->
+
+ </div>
+
+  <script>
+    fetch('http://localhost:3000/cartones')
+      .then(response => response.json())
+      .then(cartones => {
+        cartones.forEach(carton => {
+          const table = `<table>
+<thead>
+  <tr>
+    <th colspan="3">Numero de serie: ${carton.id}</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>${carton.numeros[0]}</td>
+    <td>${carton.numeros[1]}</td>
+    <td>${carton.numeros[2]}</td>
+  </tr>
+  <tr>
+    <td>${carton.numeros[3]}</td>
+    <td>${carton.numeros[4]}</td>
+    <td>${carton.numeros[5]}</td>
+  </tr>
+  <tr>
+    <td>${carton.numeros[6]}</td>
+    <td>${carton.numeros[7]}</td>
+    <td>${carton.numeros[8]}</td>
+  </tr>
+  <tr>
+    <td>${carton.numeros[9]}</td>
+    <td>${carton.numeros[10]}</td>
+    <td>${carton.numeros[11]}</td>
+  </tr>
+  <tr>
+    <td>${carton.numeros[12]}</td>
+    <td>${carton.numeros[13]}</td>
+    <td>${carton.numeros[14]}</td>
+  </tr>
+</tbody>
+</table>`;
+          document.querySelector('#cartones').innerHTML += table;
+        });
+      });
+  </script>
+
+<style>
+  body{
+    text-align: center;
+  }
+  .titulo{
+  color: brown;
+  }
+  #cartones{
+  padding-top: 20px;
+  margin: auto;
+  width: 50%;  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  }
+  table{
+    width: 100px;
+  }
+  table, th, td{
+    border: 1px solid black;
+  }
+</style>
+
+</body>
+</html>
