@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel="stylesheet" href="./css/main.css">
+
+
+
+</head>
+<body class="container">
+
+    <main>
+
+        <div>
+            <fieldset>
+                <h3>Producto Interno Bruto</h3>
+                <!-- <form action="http://127.0.0.1:8080/" method="post" name="formulario_alumno" id="formulario_producto"> -->
+                <form action="" method="POST" onsubmit="return false;" name="formulario_paises" id="formulario_paises">
+                    <div class="form-container">   
+                        <div class="search-container">
+                            <!-- <label for="txt_nombre">Nombre</label> -->
+                            <input type="text" name="nombre" id="txt_nombre" class="flex-1" placeholder='Nombre' required>
+                            <input type="text" name="continente" id="txt_continente" class="flex-1" placeholder='Continente' required>
+                            <input type="number" min='0' id="txt_poblacion" class="flex-1" placeholder='Poblacion' required>
+                            <input type="number" min='0' id="txt_pib_2019" placeholder='Pib 2019' required>
+                            <input type="number" min='0' id="txt_pib_2020" placeholder='Pib 2020' required>
+                            <input type="submit" value="Agregar País">
+                        </div> 
+                    </div>
+                </form>
+            </fieldset>
+            <div id="response" class="hidden"><h3></h3></div>
+            <fieldset>                
+                <h3>Listar<legend>
+                <div class="search-container">
+                    <fieldset>
+                        <label for="rad-5-reg">
+                            <input type="radio" name="registros" id="rad-5-reg" checked>
+                            5 Registros
+                        </label>
+                        <label for="rad-10-reg">
+                            <input type="radio" name="registros" id="rad-10-reg">
+                            10 Registros
+                        </label>
+                        <label for="20">
+                            <input type="radio" name="registros" id="rad-20-reg">
+                            20 Registros
+                        </label>
+                    </fieldset>
+                    <button id="btn_ver_siguientes" >Ver Siguientes</button>
+                </div>
+            </fieldset>
+            <fieldset>
+                <h3>Eliminar Pais</h3>
+                <div class="search-container">
+                    <div style="width: 100%; display: flex; justify-content: center; gap:10px">
+                        <input type="text" name="nombre_eliminar" id="txt_nombre_eliminar" placeholder="Nombre" style="width: calc(33.3% - 10px);">
+                    </div>
+                </div>
+                <button id="btn_eliminar_pais">Eliminar</button>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
+                <h3>Listado Paises</h3>
+                <div class="list-container">
+                    <div style="display: flex; gap: 5px; padding: 5px">
+                        <button onclick="mostrarPaises()">Mostrar Todos los paises</button>
+                    </div>
+                    <ul id="list-paises">
+    
+                    </ul>
+                </div>
+            </fieldset>
+        </div>
+   
+    </main>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+</html>

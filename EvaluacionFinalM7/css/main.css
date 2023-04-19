@@ -1,0 +1,314 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00b7ea+0,009ec3+100;Blue+3D+%2315 */
+    background: #00b7ea; /* Old browsers */
+    background: -moz-linear-gradient(top,  #00b7ea 0%, #009ec3 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #00b7ea 0%,#009ec3 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #00b7ea 0%,#009ec3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#009ec3',GradientType=0 ); /* IE6-9 */
+
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+
+h2{
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+input{
+    width: 50%;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 10px;
+    border-style: solid;
+    height: 35px;
+}
+
+input[type='number']{
+    height: 35px;
+}
+
+input:focus{
+    background-color: lightblue;
+    outline: none;
+    outline-style: none;
+}
+
+
+input[type='number'],
+button{
+    width: 100%;
+    font-size: 1.2rem;
+    width: 50%;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+input[type='radio']{
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 10px;
+    border-style: solid;
+    height: 20px;
+}
+
+button:hover,
+input[type='submit']:hover,
+input[type='number']:focus,
+button:focus{
+    background-color: lightblue;
+    outline: none;
+    outline-style: none;
+}
+
+
+button,
+input[type='submit']{
+    border: none;
+    height: 30px;
+    transition: all 0.3s ease-out;
+}
+
+button:hover,
+input[type='submit']:hover,
+input[type='submit']:focus,
+button:focus{
+    background-color:lightgreen ;
+    outline: none;
+    outline-style: none;
+}
+
+
+input[type='submit']{
+    margin-top: 10px;
+}
+
+.flex-1{
+    flex: 1 1 auto;
+}
+
+input[type='submit'],
+button{
+    width: 50%;
+    display: block;
+    margin: 0 auto;  
+}
+
+input[type='number']{
+    width: 30%;
+    height: 35px;
+}
+
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+legend {
+    margin: 10px auto;
+    text-align: center;
+    padding: 0;
+}
+
+
+.list-container{
+    /* border: solid 1px black; */
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+ul{
+    padding: 0;
+    display: flex; 
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul > * {
+    width: calc(33.3% - 7px);
+    padding: 10px 0;
+    text-align: center;
+}
+
+ul p{
+    margin: 3px ;
+    padding: 0;
+
+}
+
+ul li{
+    /* display: inline-block; */
+
+    list-style: none;
+    /* width: 48%; */
+    /* padding: 10px 0; */
+    text-align: center;
+    /* flex: 1 1 auto; */
+    border:  solid 1px #00b7ea;
+    border-radius: 15px;
+    background-color: rgb(0 0 0 / 0.2);
+    /* flex-grow: 1; */
+    color: burlywood;
+    font-weight: 400;
+    font-style: italic;
+}
+
+li strong{
+    color:blanchedalmond;
+    font-style:normal;
+    font-size: 18px;
+    padding-left: 3px;
+
+}
+  
+
+.success,
+.error,
+.hidden{
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    font-family: sans-serif;
+    text-align: center;
+    max-width: 15px auto;
+    background-color: rgb(255 255 255 / 0.7);
+
+}
+
+.success,
+.hidden,
+.error{
+    visibility: visible;
+    padding: 15px 0px;
+    opacity: 1;
+    /* margin: 15px auto; */
+}
+
+.success{
+    border: solid 3px darkgreen;
+    color:darkgreen;
+}
+
+.error{
+    /* background-color: rgb(128 0 0 / 0.3); */
+    border: solid 3px darkred;
+    color:darkred;
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    padding: 0;
+}
+
+input.error{
+    border: solid 3px darkred;
+    color:darkred;
+    margin: 0;
+    padding: 0;
+}
+
+.search-container{
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-container > *{
+    display: inline;
+    width: calc(50% - 10px);
+}
+
+.search-container > input[type=text]:nth-child(n+2){
+    flex: 1 1 auto;
+}
+
+fieldset{
+    display: block;
+    flex: 1 1 auto;
+    padding: 10px 5px;
+    border-radius: 15px;
+    background-color: rgb(0 0 0 / 0.3);
+    border: none;
+    margin: 10px auto;
+}
+
+fieldset fieldset{
+    background-color: rgb(0 0 0 / 0);
+    display: block;
+    margin: 0 auto;
+    display: flex!important;
+    justify-content: center;
+    gap: 10px;
+}
+
+fieldset fieldset legend{
+    text-align: center;
+}
+
+table{
+    background-color: rgb(0 0 0 / 0.3);
+    width: 95%;
+    line-height: 1.5;
+    border-radius: 15px;
+    padding: 0;
+}
+
+thead tr{
+    background-color:teal;
+    color:bisque;
+    font-size: 17px;
+    height: 30px;
+}
+
+thead tr th:first-of-type{
+    border-top-left-radius: 15px;
+}
+
+thead tr th:last-of-type{
+    border-top-right-radius: 15px;
+}
+
+tbody tr:nth-child(even){
+    background-color:rgb(0 128 128 / 0.25);
+}
+
+.creciendo{
+    color: rgb(181, 255, 96);
+}
+
+.decreciendo{
+    color: rgb(253, 128, 128);
+}
